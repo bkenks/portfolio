@@ -5,45 +5,12 @@
   box-sizing: border-box;
   font-family: $font-family;
 }
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
 body {
   text-align: center;
   line-height: 1.5;
   background-color: $dark-grey;
-}
-
-// typing animation class
-.typewriter {
-  overflow: hidden;
-  border-right: 0.15em solid $primary-color; // The typewriter cursor
-  white-space: nowrap; // Keeps the content on a single line
-  margin: 0 auto; // scrolling effect
-  animation: typing 3.5s steps(30, end), blink-caret 1s step-end infinite;
-  animation-delay: 0.55s;
-}
-
-// typing effect
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-// typewriter cursor effect
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: $primary-color;
-  }
 }
