@@ -8,7 +8,7 @@
     padding-top: 5rem;
   }
   @include respond(phone) {
-    padding-bottom: 1px;
+    padding-bottom: 15rem;
   }
   .project-wrapper {
     margin-bottom: 15rem;
@@ -63,15 +63,13 @@
       }
 
       & .thumbnail {
-
         .img-fluid {
           width: 100%;
           height: auto;
           vertical-align: middle;
           border-radius: 2px;
           border: none;
-          box-shadow: 8px 8px 9px 7px #131313,
-          -5px -5px 15px 7px #141414;
+          box-shadow: 8px 8px 9px 7px #131313, -5px -5px 15px 7px #141414;
         }
 
         .img-fluid-mobileapp {
@@ -80,8 +78,7 @@
           vertical-align: middle;
           border-radius: 2px;
           border: none;
-          box-shadow: 8px 8px 9px 7px #131313,
-          -5px -5px 15px 7px #141414;
+          box-shadow: 8px 8px 9px 7px #131313, -5px -5px 15px 7px #141414;
 
           @include respond(tab-land) {
             width: 100%;
