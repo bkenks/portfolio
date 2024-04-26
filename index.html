@@ -9,9 +9,12 @@
 
     <title>Brian Kenkel | Software Developer</title>
 
-    <meta name="keywords" content="bkenks, brian kenkel, C#, Python, 
+    <meta
+      name="keywords"
+      content="bkenks, brian kenkel, C#, Python, 
     Java, SQL, HTML5, CSS, Visual Studio Code, Github/Git, 
-    LangChain, Windows, Linux, Mac OS" />
+    LangChain, Windows, Linux, Mac OS"
+    />
 
     <meta name="description" content="Brian Kenkel | Software Developer" />
 
@@ -28,29 +31,32 @@
     <!-- title tag -->
     <meta property="og:title" content="Brian Kenkel | Software Developer" />
     <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Brian Kenkel's super cool portfolio site." />
-    <!-- thumbnail -->
     <meta
-      property="og:image"
-      content="./assets/profile_picture.jpg"
+      property="og:description"
+      content="Brian Kenkel's super cool portfolio site."
     />
+    <!-- thumbnail -->
+    <meta property="og:image" content="./assets/profile_picture.jpg" />
 
     <!-- TWITTER -->
     <meta property="twitter:card" content="summary_large_image" />
     <!-- url -->
-    <meta property="twitter:url" content="https://bkenks.github.io/portfolio/" />
+    <meta
+      property="twitter:url"
+      content="https://bkenks.github.io/portfolio/"
+    />
     <!-- title -->
-    <meta property="twitter:title" content="Brian Kenkel | Software Developer" />
+    <meta
+      property="twitter:title"
+      content="Brian Kenkel | Software Developer"
+    />
     <!-- description -->
     <meta
       property="twitter:description"
       content="Hi, my name is Brian Kenkel and this is my portfolio site!"
     />
     <!-- thumbnail -->
-    <meta
-      property="twitter:image"
-      content="./assets/profile_picture.jpg"
-    />
+    <meta property="twitter:image" content="./assets/profile_picture.jpg" />
 
     <!-- link tags -->
     <link rel="preload" as="style" href="./css/main.css" />
@@ -71,28 +77,25 @@
       src="./javascript/scrollveal.js"
     ></script>
 
-      <style>
+    <style>
+      .spacer {
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: -20px 0px -20px 0px;
+        border: 0px;
+      }
 
-        .spacer {
-          aspect-ratio: 960/300;
-          width: 100%;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
-          margin: -20px 0px -20px 0px;
-          border: 0px;
-        }
+      .wavegtb {
+        background-image: url("assets/layered_waves_gtb.svg");
+      }
 
-        .wavegtb {
-          background-image: url('assets/layered_waves_gtb.svg');
-        }
-
-        .wavebtg {
-          background-image: url('assets/layered_waves_btg.svg');
-        }
-
-      </style>
-
+      .wavebtg {
+        background-image: url("assets/layered_waves_btg.svg");
+      }
+    </style>
   </head>
   <body>
     <!-- Hero Section -->
@@ -114,7 +117,7 @@
     <!-- /END Hero Section -->
 
     <div class="spacer wavegtb"></div>
-    
+
     <!-- About Section -->
     <section id="about">
       <div class="container">
@@ -129,19 +132,27 @@
           </div>
           <div class="about-wrapper__info">
             <p class="about-wrapper__info-text">
-                I am Brian Kenkel, an Information Technology (Software Development Track) 
-                student at the University of Cincinnati set to graduate in August of 2024.
+              I am Brian Kenkel, an Information Technology (Software Development
+              Track) student at the University of Cincinnati set to graduate in
+              August of 2024.
             </p>
             <p class="about-wrapper__info-text">
-                I've had a passion for programming since a young age and enjoy solving complex problems 
-                through coding. I've dedicated countless hours to honing my skills. I also have 
-                interests in outdoor activities like skiing, hiking, and climbing. 
-                I'm eager to contribute my technical expertise to various projects 
-                and collaborative teams, seeking opportunities 
-                that align with my skills and aspirations.
+              I've had a passion for programming since a young age and enjoy
+              solving complex problems through coding. I've dedicated countless
+              hours to honing my skills. I also have interests in outdoor
+              activities like skiing, hiking, and climbing. I'm eager to
+              contribute my technical expertise to various projects and
+              collaborative teams, seeking opportunities that align with my
+              skills and aspirations.
             </p>
             <span class="about-wrapper__cta">
-              <a href="resume/Brian Kenkel's Resume.pdf" class="cta-btn cta-btn--resume" target="_blank" rel="noopener noreferrer">View Resume</a>
+              <a
+                href="resume/Brian Kenkel's Resume.pdf"
+                class="cta-btn cta-btn--resume"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Resume</a
+              >
             </span>
           </div>
         </div>
@@ -162,27 +173,34 @@
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">PDFChat</h3>
               <p class="project-wrapper__text-info">
-                PDFChat is an application built to "chat" with private data, such as a PDF. 
-                I am also working to include other types of data as I further my knowledge 
-                in LangChain.
+                PDFChat is an application built to "chat" with private data,
+                such as a PDF. I am also working to include other types of data
+                as I further my knowledge in LangChain.
               </p>
               <div class="project-wrapper__text-btns">
-                <a href="https://github.com/bkenks/PDFChat" target="_blank" class="source-code-btn text-color-main"
+                <a
+                  href="https://github.com/bkenks/PDFChat"
+                  target="_blank"
+                  class="source-code-btn text-color-main"
                   >Source Code</a
                 >
               </div>
             </div>
 
             <div class="project-wrapper__image">
-              <a href="https://github.com/bkenks/PDFChat/blob/main/images/screenshot.png" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/bkenks/PDFChat/blob/main/images/screenshot.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div class="thumbnail rounded">
-                    <img
-                      src="./assets/pdfchat_screenshot.png"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
+                  <img
+                    src="./assets/pdfchat_screenshot.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
                 </div>
               </a>
             </div>
@@ -194,10 +212,15 @@
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">To-Do List</h3>
               <p class="project-wrapper__text-info">
-                It's a simple to-do list app. This app was made for learning purposes. The technologies learned were Flutter/Dart, as listed in the Tech Stack of my GitHub.
+                It's a simple to-do list app. This app was made for learning
+                purposes. The technologies learned were Flutter/Dart, as listed
+                in the Tech Stack of my GitHub.
               </p>
               <div class="project-wrapper__text-btns">
-                <a href="https://github.com/bkenks/TodoMobileApp" target="_blank" class="source-code-btn text-color-main"
+                <a
+                  href="https://github.com/bkenks/TodoMobileApp"
+                  target="_blank"
+                  class="source-code-btn text-color-main"
                   >Source Code</a
                 >
               </div>
@@ -206,13 +229,13 @@
             <div class="project-wrapper__image">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail">
-                    <img
-                      src="./assets/todo_screenshot.png"
-                      class="img-fluid-mobileapp rounded"
-                      alt="Project Image"
-                      width="372"
-                      height="767"
-                    />
+                  <img
+                    src="./assets/todo_screenshot.png"
+                    class="img-fluid-mobileapp rounded"
+                    alt="Project Image"
+                    width="372"
+                    height="767"
+                  />
                 </div>
               </a>
             </div>
@@ -224,34 +247,39 @@
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Automotive Head Unit</h3>
               <p class="project-wrapper__text-info">
-                The automotive head unit was a project I built for my 2007 Acura TL Type-S 
-                to allow me to use CarPlay, Bluetooth, and have a running PC in my older 
-                vehicle while maintaining the integrity and looks of the interior.
+                The automotive head unit was a project I built for my 2007 Acura
+                TL Type-S to allow me to use CarPlay, Bluetooth, and have a
+                running PC in my older vehicle while maintaining the integrity
+                and looks of the interior.
               </p>
               <div class="project-wrapper__text-btns">
-                <a href="pages/headunit.html" class="source-code-btn text-color-main"
-                  >Read More</a>
+                <a
+                  href="pages/headunit.html"
+                  class="source-code-btn text-color-main"
+                  >Read More</a
+                >
               </div>
             </div>
 
             <div class="project-wrapper__image">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
-                    <img
-                      src="./assets/openauto.png"
-                      class="img-fluid"
-                      alt="Project Image"
-                      width="1366"
-                      height="767"
-                    />
+                  <img
+                    src="./assets/openauto.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
                 </div>
               </a>
             </div>
           </article>
           <!-- /END Project -->
 
-
-          <a href="https://github.com/bkenks" class="cta-btn cta-btn--github">View GitHub</a>
+          <a href="https://github.com/bkenks" class="cta-btn cta-btn--github"
+            >View GitHub</a
+          >
         </div>
       </div>
     </section>
@@ -265,15 +293,24 @@
         <h2 class="section-title contact">Contact</h2>
         <div class="contact-wrapper">
           <p class="contact-wrapper__text">
-            I'm always open to new opportunities, collaborations, and engaging discussions. 
-            If you have any questions, ideas, or projects in mind, the best way to reach me is through email. 
-            I check my inbox regularly and will do my best to respond promptly. 
-            Feel free to drop me a line at <b>briankenkel.t@gmail.com</b>, whether it's for professional inquiries or just to say hello! 
-            <br><br><b>Other personal accounts</b> are linked below as well. <br><br>
-            For your convenience, there's also a button below this paragraph that will directly open your email client and set up a message addressed to me. 
-            I'm looking forward to hearing from you!
+            I'm always open to new opportunities, collaborations, and engaging
+            discussions. If you have any questions, ideas, or projects in mind,
+            the best way to reach me is through email. I check my inbox
+            regularly and will do my best to respond promptly. Feel free to drop
+            me a line at <b>briankenkel.t@gmail.com</b>, whether it's for
+            professional inquiries or just to say hello! <br /><br /><b
+              >Other personal accounts</b
+            >
+            are linked below as well. <br /><br />
+            For your convenience, there's also a button below this paragraph
+            that will directly open your email client and set up a message
+            addressed to me. I'm looking forward to hearing from you!
           </p>
-          <a href="mailto:briankenkel.t@gmail.com" class="cta-btn cta-btn--resume">Send an E-Mail</a>
+          <a
+            href="mailto:briankenkel.t@gmail.com"
+            class="cta-btn cta-btn--resume"
+            >Send an E-Mail</a
+          >
         </div>
       </div>
     </section>
@@ -318,21 +355,24 @@
     <!-- END Footer Section -->
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <script src="./javascript/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="./javascript/valtilt.js"></script>
-    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"
+    ></script>
     <script type="text/javascript">
-            options = {
-            "cursorOuter": "circle-basic",
-            "hoverEffect": "circle-move",
-            "hoverItemMove": false,
-            "defaultCursor": false,
-            "outerWidth": 30,
-            "outerHeight": 30
-              };
-            magicMouse(options);
+      options = {
+        cursorOuter: "circle-basic",
+        hoverEffect: "circle-move",
+        hoverItemMove: false,
+        defaultCursor: false,
+        outerWidth: 30,
+        outerHeight: 30,
+      };
+      magicMouse(options);
     </script>
   </body>
 </html>
