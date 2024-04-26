@@ -105,10 +105,22 @@
       >&#10508;</a
     >
 
+    <!-- headunithero Section -->
+    <div id="headunithero">
+      <section class="container">
+        <h1 class="headunithero-title">
+          <span class="text-color-main name">Automotive Head Unit</span>
+        </h1>
+      </section>
+    </div>
+    <!-- /END headunithero Section -->
+
+    <div class="spacer wavegtb"></div>
+
     <!-- Head Unit Section -->
     <section id="headunit">
       <div class="container">
-        <h2 class="section-title">Automotive Head Unit</h2>
+        <!-- <h2 class="section-title">Automotive Head Unit</h2> -->
 
         <!-- Section 1 (Image | Text) -->
         <div class="row headunit-wrapper">
@@ -121,13 +133,17 @@
 
           <div class="headunit-wrapper__inforight">
             <p class="headunit-wrapper__info-text">
-              I've had a passion for programming since a young age and enjoy
-              solving complex problems through coding. I've dedicated countless
-              hours to honing my skills. I also have interests in outdoor
-              activities like skiing, hiking, and climbing. I'm eager to
-              contribute my technical expertise to various projects and
-              collaborative teams, seeking opportunities that align with my
-              skills and aspirations.
+              As an overview, this project took me a little over one month to
+              complete. The main technologies used were a Raspberry Pi 4 Model B
+              (4GB version I believe), a touchscreen, a driver board for the
+              touchscreen, a backup camera, a wireless CarPlay adapter, and
+              OpenAuto Pro. The first thing I did to build this project was
+              start with the brains, the Raspberry Pi 4. I began by looking for
+              software that would work give me a base to work off of. Magically,
+              I found OpenAuto Pro, which was created for the exact purpose of
+              using a Raspberry Pi as a head unit. After finding the perfect
+              software to use, I flashed it over to the Raspberry Pi and started
+              troubleshooting common problems.
             </p>
           </div>
         </div>
@@ -137,13 +153,25 @@
         <div class="row headunit-wrapper">
           <div class="headunit-wrapper__infoleft">
             <p class="headunit-wrapper__info-text">
-              I've had a passion for programming since a young age and enjoy
-              solving complex problems through coding. I've dedicated countless
-              hours to honing my skills. I also have interests in outdoor
-              activities like skiing, hiking, and climbing. I'm eager to
-              contribute my technical expertise to various projects and
-              collaborative teams, seeking opportunities that align with my
-              skills and aspirations.
+              After getting the software fully set up. I started working on
+              getting the new back-up camera to work with the Raspberry Pi. This
+              is where I experienced a lot of problems. To start, the signal
+              coming from the camera was RCA. To solve that, I simply bought a
+              RCA to HDMI adapter. The next problem was how to manage the video
+              feed from the Raspberry Pi and the backup camera. The solution was
+              an HDMI splitter. However, the last thing I want to do is press a
+              button on an HDMI splitter every time I switch the car between
+              reverse and any other gear. To mediate this, I spliced the power
+              wire of the backup camera and ran it to a GPIO pin on the
+              Raspberry Pi. Mind you, the backup camera gets power from the
+              reverse lights on the car, so it's only receiving power in
+              reverse. Then, I wrote a python script that checks for a current
+              on that GPIO pin. Once a current is detected, it will send a pulse
+              of current out another GPIO pin. I attached the pulsing pin with a
+              wire to the button on the HDMI splitter and... voilà! The video
+              input now switched when the car is in reverse. All I had to do, is
+              do the reverse for when there is no power coming through the
+              backup camera power wire.
             </p>
           </div>
 
@@ -164,13 +192,27 @@
 
           <div class="headunit-wrapper__inforight">
             <p class="headunit-wrapper__info-text">
-              I've had a passion for programming since a young age and enjoy
-              solving complex problems through coding. I've dedicated countless
-              hours to honing my skills. I also have interests in outdoor
-              activities like skiing, hiking, and climbing. I'm eager to
-              contribute my technical expertise to various projects and
-              collaborative teams, seeking opportunities that align with my
-              skills and aspirations.
+              This problem wasn't completely over yet though. I had a minor
+              oversight in how the vehicle worked and didn't realize that when
+              you put the car in park, the shifter passes over reverse and sends
+              power to the reverse lights, and camera for a brief second. Now,
+              in a world where everything is perfect and there is zero latency,
+              the script should've still worked because when it stopped
+              receiving power, it would send another pulse to toggle the video
+              input back to the Raspberry Pi. This was not the case though. The
+              fix was easy enough though. For this, let's pretend I have two
+              functions named "pulseIn" and "pulseOut". "pulseIn" sends the
+              pulse to toggle to the backup camera and "pulseOut" does the
+              opposite. I programmed a slight delay into "pulseIn". I then
+              implemented two booleans, "reverse", which would indicate if the
+              car is in reverse or not, and "backupCam" which would indicate if
+              the video input was currently on the backup camera. So, in this
+              scenario "pulseIn" would run, hit a delay before it pulses, then
+              check the boolean, "reverse" which would be false as the car has
+              shifted into park by now. So, it does not send a pulse. Then,
+              "pulseOut" would run as the car is shifted out of reverse and into
+              park, check and see that "backupCam" is false since the initial
+              pulse never fired, and wouldn't trigger a pulse.
             </p>
           </div>
         </div>
@@ -180,13 +222,15 @@
         <div class="row headunit-wrapper">
           <div class="headunit-wrapper__infoleft">
             <p class="headunit-wrapper__info-text">
-              I've had a passion for programming since a young age and enjoy
-              solving complex problems through coding. I've dedicated countless
-              hours to honing my skills. I also have interests in outdoor
-              activities like skiing, hiking, and climbing. I'm eager to
-              contribute my technical expertise to various projects and
-              collaborative teams, seeking opportunities that align with my
-              skills and aspirations.
+              Finally, the big issues were over. All that was left was polishing
+              up everything. This included implementing a wireless CarPlay
+              adapter to avoid using a usb cable. I also hid all the wiring,
+              utilizing cable ties to maintain organization. I created a boot
+              screen as well for my specific vehicle in PhotoShop, which you can
+              see in this gif. Lastly, I found a uninterrupted power source
+              (UPS) for the Pi so that when it loses power as the car turns off,
+              it will properly shut the Pi off without risking corrupting the SD
+              card.
             </p>
           </div>
 
