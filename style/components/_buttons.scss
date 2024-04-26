@@ -119,6 +119,7 @@
     }
   }
 }
+
 /* Resume Style */
 .cta-btn--resume {
   border-radius: 0;
@@ -218,6 +219,33 @@
   }
 }
 
+/* Back Button Style */
+.cta-btn--back {
+  border-radius: 0;
+  color: $white-color;
+  font-weight: 900;
+  font-size: x-large;
+  //border: 2px solid $white-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &::after {
+    background: $white-color;
+  }
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+    box-shadow: none;
+    @include respond(phone) {
+      color: $white-color;
+    }
+    &::after {
+      width: 100%;
+    }
+  }
+}
 
 // /* Arrow Button */
 // .fa-angle-up {
