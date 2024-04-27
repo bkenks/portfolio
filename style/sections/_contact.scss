@@ -5,8 +5,8 @@
     $primary-color 0%,
     $secondary-color 100%
   );*/
-  margin-top: -15rem;
-  margin-bottom: -1px;
+  margin-top: 0rem;
+  margin-bottom: 0px;
   color: $white-color;
 
   @include respond(tab-land) {
